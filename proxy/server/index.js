@@ -24,7 +24,6 @@ app.get('/api/images/:listing_id', (req, res) => {
 app.get('/api/reviews/:listing_id', (req, res) => {
   axios.get(`http://54.69.92.234:80${req.url}`)
     .then(({ data }) => {
-      console.log('reviews data', data);
       res.send(data);
     })
     .catch(err => console.log(err));
@@ -32,7 +31,6 @@ app.get('/api/reviews/:listing_id', (req, res) => {
 app.get('/api/listings/:listing_id', (req, res) => {
   axios.get(`http://3.138.112.1:80${req.url}`)
     .then(({ data }) => {
-      console.log('images data', data);
       res.send(data);
     })
     .catch(err => console.log(err));
@@ -40,7 +38,6 @@ app.get('/api/listings/:listing_id', (req, res) => {
 app.get('/api/availability/:listing_id', (req, res) => {
   axios.get(`http://44.238.144.198:80${req.url}`)
     .then(({ data }) => {
-      console.log('availability data', data);
       res.send(data);
     })
     .catch(err => console.log(err));
